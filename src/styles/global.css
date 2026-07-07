@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+@theme {
+  /* Семантические цвета проекта */
+  --color-primary: #7e3af2;
+  --color-error: #e02424;
+
+  /* Цвета для текста */
+  --color-main: #27272a;
+  --color-muted: #696969;
+
+  /* Цвета для фонов и границ */
+  --color-surface: #FCFBFA;
+  --color-border-light: #e5e7eb;
+}
+
+@theme inline {
+  --font-sans: var(--font-montserrat);
+}
+
+@layer base {
+  h1 {
+    /* Мобилка (по умолчанию) */
+    @apply text-2xl font-semibold;
+
+    /* Десктоп (экраны от 768px и выше) */
+    @apply md:text-6xl md:font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+
+    @apply md:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg font-semibold;
+
+    @apply md:text-2xl;
+  }
+
+  .subtitle-1 {
+    @apply text-xl font-bold;
+
+    @apply md:font-semibold;
+  }
+
+  .subtitle-2 {
+    @apply text-sm font-semibold;
+
+    @apply md:text-base;
+  }
+
+  .body-1 {
+    @apply text-sm font-normal;
+
+    @apply md:text-xl;
+  }
+}
