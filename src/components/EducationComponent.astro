@@ -1,0 +1,16 @@
+---
+interface Props {
+  period: string;
+  role: string;
+  organization: string;
+}
+const { period, role, organization } = Astro.props;
+---
+
+<div class="border-border-light flex gap-2 pb-8 border-b-2">
+  <p class="body">{period}</p>
+  <div class="flex flex-col gap-2">
+    <h4 class="subtitle">{role}</h4>
+    <p class="body">{organization}</p>
+  </div>
+</div>

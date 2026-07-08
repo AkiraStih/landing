@@ -1,5 +1,5 @@
 ---
-import BaseButton from './ui/BaseButton.astro';
+import BaseButton from '@components/ui/BaseButton.astro';
 ---
 
 <main class="relative h-[calc(100vh-63.6px)] overflow-hidden">
@@ -10,11 +10,12 @@ import BaseButton from './ui/BaseButton.astro';
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Hey, I'm Nick</h1>
       <p class="text-muted mt-4 text-xl">Frontend developer</p>
-      <br>
-      <p class="text-muted mt-4 text-xl">
+      <div class="h-1 w-7  bg-primary mt-24"></div>
+      <p class="text-muted mt-6 text-xl">
         Help you to create high-quality digital products that your clients will love and
         let your business thrive
       </p>
+
       <BaseButton class="mt-14">Get in touch</BaseButton>
     </div>
   </div>

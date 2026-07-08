@@ -39,7 +39,7 @@
     @apply md:text-2xl;
   }
 
-  .subtitle-1 {
+  .subtitle {
     @apply text-xl font-bold;
 
     @apply md:font-semibold;
@@ -51,7 +51,7 @@
     @apply md:text-base;
   }
 
-  .body-1 {
+  .body{
     @apply text-sm font-normal;
 
     @apply md:text-xl;
