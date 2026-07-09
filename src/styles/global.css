@@ -40,9 +40,9 @@
   }
 
   .subtitle {
-    @apply text-xl font-bold;
+    @apply text-sm font-bold;
 
-    @apply md:font-semibold;
+    @apply md:text-xl md:font-semibold;
   }
 
   .subtitle-2 {

@@ -4,10 +4,10 @@ import Error from '@assets/error.svg';
 import BaseButton from '@components/ui/BaseButton.astro';
 ---
 
-<section class="bg-[url(/bg.png)] px-64.5 py-18">
-  <div class="flex flex-col gap-12 rounded-2xl bg-white p-12">
+<section class="bg-[url(/bg.png)] bg-cover py-16 px-2.5 md:py-17 md:px-10 lg:px-64.5 lg:py-18">
+  <div class="flex flex-col gap-12 rounded-2xl bg-white py-12 px-4 md:px-9 md:py-12 lg:p-12">
     <h2>Let’s discuss your project</h2>
-    <div class="flex gap-5">
+    <div class="flex flex-col md:flex-row gap-5">
       <div class="relative flex flex-1 flex-col gap-1.5">
         <label for="name" class="subtitle-2">Your full name</label>
         <Person class="text-muted absolute top-1/2 translate-x-5 translate-y-1/9" />
@@ -15,7 +15,7 @@ import BaseButton from '@components/ui/BaseButton.astro';
           id="name"
           type="text"
           placeholder="Name Surname"
-          class="body focus:border-primary w-full rounded-xl border border-gray-300 px-12.5 py-3.5 outline-none focus:ring-2 focus:ring-purple-200"
+          class="body focus:border-primary w-full rounded-xl border border-gray-300 pl-12.5 py-3.5 outline-none focus:ring-2 focus:ring-purple-200"
         />
       </div>
       <div class="relative flex flex-1 flex-col gap-1.5">
@@ -25,7 +25,7 @@ import BaseButton from '@components/ui/BaseButton.astro';
           id="email"
           type="email"
           placeholder="name@example.com"
-          class="body border-error focus:border-primary w-full rounded-xl border px-12.5 py-3.5 outline-none focus:ring-2 focus:ring-purple-200"
+          class="body border-error focus:border-primary w-full rounded-xl border pl-12.5 py-3.5 outline-none focus:ring-2 focus:ring-purple-200"
         />
       </div>
     </div>
@@ -37,6 +37,6 @@ import BaseButton from '@components/ui/BaseButton.astro';
         class="body w-full resize-none rounded-xl border border-gray-200 p-4 outline-none focus:border-purple-400"
       ></textarea>
     </div>
-    <BaseButton class="max-w-36.75">Submit</BaseButton>
+    <BaseButton class="lg:max">Submit</BaseButton>
   </div>
 </section>

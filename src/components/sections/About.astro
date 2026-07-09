@@ -5,21 +5,24 @@ import EducationComponent from '@components/EducationComponent.astro';
 ---
 
 <section class="min-h-screen">
-  <h2 class="mt-25 ml-21">About me</h2>
-  <div class="mt-20 flex items-center gap-40 px-20">
-    <img src="about.png" alt="" />
+  <h2 class="mt-12 ml-4 md:mt-25 md:ml-10 lg:ml-21">About me</h2>
+  <div
+    class="mt-9 flex flex-col gap-9 px-4 md:mt-20 md:flex-row md:items-center md:gap-10 md:px-20 lg:gap-40"
+  >
+    <img class="md:w-[290px] lg:w-[412px]" src="about.png" alt="" />
     <div class="max-w-110">
       <div class="bg-primary j h-1 w-7"></div>
-      <p class="text-muted mt-6 text-xl">
-        <span class="text-main text-xl font-semibold"> Nick Richardson </span> - specialist
-        in Frontend development. Clear code is my passion. Solving issues through negotiations
+      <p class="text-muted mt-6 text-sm md:text-xl">
+        <span class="text-main text-sm font-semibold md:text-xl"> Nick Richardson </span> -
+        specialist in Frontend development. Clear code is my passion. Solving issues through
+        negotiations
       </p>
-      <BaseButton class="mt-14">Get in touch</BaseButton>
+      <BaseButton class="mt-14 hidden md:flex">Get in touch</BaseButton>
     </div>
   </div>
-  <div class="mt-20 flex justify-between px-22">
+  <div class="mt-20 flex flex-col gap-20 px-4 md:px-22 lg:flex-row lg:justify-between">
     <div>
-      <h3>Interest</h3>
+      <h3 class="lg:2xl text-xl">Interest</h3>
       <div class="mt-11 flex flex-col gap-11">
         <InterestCard icon="music" title="Music" text="Indie rock | Reggae" />
         <InterestCard icon="art" title="Art" text="Edvard Munch | Frida Kahlo" />
@@ -28,7 +31,7 @@ import EducationComponent from '@components/EducationComponent.astro';
     </div>
 
     <div>
-      <h3>Education & Experience</h3>
+      <h3 class="lg:2xl text-xl">Education & Experience</h3>
       <div class="flex flex-col gap-6 pt-11">
         <EducationComponent
           role="Middle Frontend developer"
@@ -46,6 +49,7 @@ import EducationComponent from '@components/EducationComponent.astro';
           organization="Saint Petersburg State University"
         />
       </div>
+      <BaseButton class="mt-12 mb-23 md:hidden">Get in touch</BaseButton>
     </div>
   </div>
 </section>
