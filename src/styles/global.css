@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Семантические цвета проекта */
@@ -10,7 +10,7 @@
   --color-muted: #696969;
 
   /* Цвета для фонов и границ */
-  --color-surface: #FCFBFA;
+  --color-surface: #fcfbfa;
   --color-border-light: #e5e7eb;
 }
 
@@ -51,9 +51,13 @@
     @apply md:text-base;
   }
 
-  .body{
+  .body {
     @apply text-sm font-normal;
 
     @apply md:text-xl;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

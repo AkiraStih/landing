@@ -3,16 +3,16 @@ import Logo from '@assets/logo.svg';
 ---
 
 <header
-  class="bg-surface border-border-light sticky top-0 flex w-full justify-between border-b-2 px-14 py-3.5 z-10"
+  class="bg-surface border-border-light sticky top-0 z-10 flex w-full justify-between border-b-2 px-14 py-3.5"
 >
   <Logo />
   <!-- Десктоп-меню -->
   <nav
     class="text-muted hidden text-base font-semibold md:flex md:items-center md:gap-3.5"
   >
-    <a href="/" class="hover:text-primary">Main</a>
-    <a href="/about" class="hover:text-primary">About</a>
-    <a href="/get-in-touch" class="hover:text-primary">Get in touch</a>
+    <a href="#main" class="hover:text-primary">Main</a>
+    <a href="#about" class="hover:text-primary">About</a>
+    <a href="#get-in-touch" class="hover:text-primary">Get in touch</a>
   </nav>
 
   <!-- Кнопка-бургер, только мобилка -->
@@ -81,5 +81,34 @@ import Logo from '@assets/logo.svg';
     iconBurger?.classList.toggle('hidden');
     iconClose?.classList.toggle('hidden');
     burger.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  const sections = document.querySelectorAll('section, main'); 
+  const navLinks = document.querySelectorAll('a');
+
+  const options = {
+    root: null, 
+    rootMargin: '0px',
+    threshold: 0.8, 
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('text-primary');
+          } else {
+            link.classList.remove('text-primary');
+          }
+        });
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 </script>
